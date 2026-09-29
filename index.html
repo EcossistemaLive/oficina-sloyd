@@ -57,7 +57,7 @@ p{margin:0 0 1em}
 .sans{font-family:var(--sans)}
 .muted{color:var(--graphite)}
 section{padding:88px 0;border-top:1px solid var(--rule)}
-.lead{font-size:1.3rem;line-height:1.55;max-width:60ch}
+.lead{font-size:1.3rem;line-height:1.55;max-width:60ch;text-wrap:pretty}
 
 /* nav */
 .toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(237,239,232,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
@@ -172,8 +172,8 @@ td:first-child{font-weight:700}
 /* session bar */
 .session{margin-top:56px}
 .sbar{display:flex;width:100%;height:92px;border:2px solid var(--ink)}
-.sbar div{display:flex;flex-direction:column;justify-content:center;padding:0 10px;border-right:2px solid var(--ink);font-family:var(--sans);font-size:.9rem;line-height:1.2;overflow:hidden}
-.sbar div:last-child{border-right:0}
+.sbar div{display:flex;flex-direction:column;justify-content:center;padding:0 8px;border-right:2px solid var(--ink);font-family:var(--sans);font-size:.9rem;line-height:1.2;overflow:hidden}
+.sbar div:last-child{border-right:0;padding:0 4px;text-align:center;align-items:center}
 .sbar strong{font-size:1rem}
 .sbar .work{background:var(--pine);color:var(--paper)}
 .sbar .talk{background:var(--chalk-soft)}
@@ -257,6 +257,7 @@ footer{padding:40px 0 60px;border-top:1px solid var(--rule);font-family:var(--sa
   .money{grid-template-columns:1fr}
 }
 @media (max-width:720px){
+  .br-desktop{display:none}
   body{font-size:1.06rem}
   section{padding:64px 0}
   .principles{grid-template-columns:1fr}
@@ -532,13 +533,13 @@ footer{padding:40px 0 60px;border-top:1px solid var(--rule);font-family:var(--sa
 
     <div class="session">
       <h3>Anatomia de um encontro de 90 minutos</h3>
-      <div class="sbar" role="img" aria-label="Encontro de 90 minutos: acolhida 10, provocação 10, desenho 10, oficina 45, arrumação 10, partilha 5">
+      <div class="sbar" role="img" aria-label="Encontro de 90 minutos: acolhida 10 min, provocação 10 min, desenho 10 min, oficina 45 min, arrumação 10 min, roda 5 min">
         <div class="talk" style="width:11.1%"><strong>Acolhida</strong><small>10 min</small></div>
         <div class="talk" style="width:11.1%"><strong>Provocação</strong><small>10 min</small></div>
         <div class="talk" style="width:11.1%"><strong>Desenho</strong><small>10 min</small></div>
         <div class="work" style="width:50%"><strong>Oficina</strong><small>45 min · o mestre ensina, observa e recua; o adulto da dupla segura, apoia e pergunta</small></div>
         <div class="care" style="width:11.1%"><strong>Arrumação</strong><small>10 min</small></div>
-        <div class="talk" style="width:5.6%"><strong>Roda</strong><small>5</small></div>
+        <div class="talk" style="width:5.6%"><strong>Roda</strong><small>5 min</small></div>
       </div>
     </div>
   </div>
@@ -601,7 +602,9 @@ footer{padding:40px 0 60px;border-top:1px solid var(--rule);font-family:var(--sa
 <section id="fases">
   <div class="wrap">
     <h2>Três fases, cada uma destravada por dados</h2>
-    <div class="prose"><p class="lead">Nenhuma fase começa antes que a anterior prove demanda. O MVP testa na escola; a sala própria testa a operação; a rede testa o método em outras mãos — como o seminário de Nääs fez há 150 anos.</p></div>
+    <div class="prose">
+      <p class="lead">Nenhuma fase começa antes que a anterior prove demanda.<br class="br-desktop">O MVP testa na escola; a sala própria testa a operação;<br class="br-desktop">a rede testa o método em outras mãos — como o seminário de Nääs fez há 150 anos.</p>
+    </div>
     <div class="phases">
       <div class="phase">
         <h3>1 · MVP na escola</h3>
